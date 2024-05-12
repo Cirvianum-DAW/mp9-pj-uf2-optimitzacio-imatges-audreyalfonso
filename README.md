@@ -1,191 +1,111 @@
-[![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-24ddc0f5d75046c5622901739e7c5dd533143b0c8e959d652212380cedb1ea36.svg)](https://classroom.github.com/a/u3DNqCQ-)
-# MP9 DAW - UF2 Project - Multimedia resources in WebApps
+# Tailwind Project
 
-## Abans de començar
+## Arxius i instruccions d'execució
 
-- Per fer aquesta pràctica, necessitem d'una pàgina web. Et recomano que treballis amb la pàgina que vam realitzar a l'anterior projecte i facis les modificacions i/o adaptacions necessàries per realitzar el que es demana. Si no has realitzat el projecte anterior, és molt recomanable aprofitis per aprendre alguns conceptes bàsics de TailwindCSS i et creïs una pàgina web senzilla per poder dur a terme el que es demana. Tens a la teva disposició els recursos de Tailwind dins la secció de UF1 d'aquesta assignatura. Per començar pots fer un cop d'ull al següent video: [Curso Práctico de Tailwind CSS](https://www.youtube.com/watch?v=vwNklJxbsw0&ab_channel=Aprendible).
+El projecte té els següents fitxers:
 
-Us deixo alguns exemples de webs realitzades pels vostres companys i que us poden servir de referència:
+- `src/index.html`: Aquest fitxer conté el codi HTML de la pàgina web.
+- `src/index.js`: Aquest fitxer conté el codi JavaScript que s'executa a la pàgina web.
+- `src/styles.css`: Aquest fitxer conté el codi CSS de la pàgina web, escrit amb Tailwind CSS.
+- `package.json`: Aquest fitxer és el fitxer de configuració de npm. Llista les dependències i scripts del projecte.
+- `postcss.config.js`: Aquest fitxer és utilitzat per Parcel per processar el codi CSS.
+- `README.ca.md`: Aquest fitxer conté la documentació del projecte.
 
-- [Entre Pins - Ll. Pujades](https://entrepins-uf2-llpujadas.netlify.app/)
-- [Food Ninja - G. Singh](https://cirvianum-daw.github.io/mp9-pj-uf2-optimitzacio-imatges-gsingh704/)
-- [Restaurant - A. Luna](https://main--pjuf2aaronluna.netlify.app/)
+### Per executar el projecte, segueix aquests passos:
 
-Anem a veure què haureu de realitzar en aquest projecte amb el que tancarem la UF2:
+1. Clona el repositori a la teva màquina local.
+2. Executa `npm install` per instal·lar les dependències del projecte.
+3. Executa `npm run dev` per iniciar el servidor de desenvolupament.
+4. Obre el teu navegador i navega a `http://localhost:1234` per veure la pàgina web.
 
-## Project Goals
+Aquest projecte utilitza Tailwind CSS i Parcel com exemple d'ús d'eines modernes en el desenvolupament web.
 
-- Add the multimedia resources to a web project (images, videos, etc.).
-- Optimize the multimedia resources to improve the performance of the web.
-- Use different tools and techniques for optimizing multimedia resources.
-- Learn about image-related and integrated tools in web development environments.
+## Descripció del Projecte
 
-## Background
+Aquest projecte té com a objectiu el desenvolupament d'un lloc web senzill amb estil i contingut lliure, utilitzant Tailwind CSS com a eina principal per a l'estil i Parcel per a la gestió de recursos. **El projecte és de temàtica lliure però ha de seguir una estructura específica.**
 
-This last days we've been seeing different tools and techniques for optimizing multimedia resources. We've seen how to change the format of an image, how to reduce its size previous to its use in a web.
+## Directrius
 
-Let's see some of the core concepts on image optimization:
+### Part 1: Desenvolupament
 
-- **Prefer Vector Formats:**
+#### Configuració Inicial
 
-  - Vector images are resolution and scale independent, suitable for multi-device and high-resolution environments.
+Iniciar el projecte amb un arxiu HTML bàsic i utilitzar les següents eines:
 
-- **Minify and Compress SVG Assets:**
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Parcel](https://v2.parceljs.org/)
 
-  - Remove unnecessary metadata from XML markup in SVG assets.
-  - Ensure servers are configured for GZIP compression for SVG assets.
+Tailwind i Parcel ja estan disponibles en aquest Boilerplate. Tailwind ja sabem què ens permet fer. Esbrina quin és l'objectiu de Parcel i explica-ho breument a la documentació.
 
-- **Prefer WebP or AVIF Over Older Raster Formats:**
+#### SiteMap i Wireframe
 
-  - WebP and AVIF images are usually smaller than older formats.
+Comença llegint bé què et demana el projecte. Un cop hagis entès bé l'estructura del projecte, crea un SiteMap esquemàtic que expliqui com s'estructura el lloc web. Figma pot ajudar-te ja amb això: https://www.figma.com/templates/sitemap-generator/ (no és necessari que utilitzes aquesta plantilla, però pot ser útil).
 
-- **Pick Best Raster Image Format:**
+També hauràs de crear un Wireframe que mostri l'estructura de les pàgines del lloc web. Això sí que ho hauries de fer amb Figma. Tingues en compte que el lloc web ha de tenir almenys 4 pàgines diferents.
 
-  - Determine functional requirements and select the format that suits each asset.
-  - Use the right format and resolution for each image depending on the context.
-  - Use art direction to serve different images for different devices.
+#### Disseny amb Tailwind CSS
 
-- **Experiment with Optimal Quality Settings for Raster Formats:**
+Utilitzar les principals característiques de Tailwind CSS, incloent classes per a:
 
-  - Don't hesitate to reduce "quality" settings; the results are often good with significant byte savings.
+- Mides
+- Colors
+- Fonts
+- Marges i Paddings
+- Flexbox i/o Grid
+- Assegurar-te que el lloc sigui totalment **responsive**
 
-- **Serve Scaled Images:**
+#### Estructura i Contingut
 
-  - Resize images to ensure the "display" size is close to the "natural" size.
-  - Pay attention to large images as they contribute to significant overhead when resized.
+Crear un petit portal amb contingut lliure. La pàgina ha de contenir, com a mínim (suposem l'exmple d'un lloc web sobre gastronomia):
 
-- **Automate, Automate, Automate:**
-  - Automated tools can help us with optimization of all image assets without manual intervention.
+- **Portada**: : Presenta el contingut, amb enllaços a la resta de pàgines.
+- **Categoria**: Aquesta pàgina ha d'oferir un llistat d'elements relacionats amb la temàtica general.
+  - Per exemple: llistat de plats tradicionals de la regió de Piemont o un llistat d'històries relacionades amb el menjar en l'antiga
+    Roma
+- **Detall**: En la categoria, ha d'haver-hi almenys una pàgina de detall que ha de seguir un format d'article i incloure informació relacionada amb l'element a descriure. És necessari que cada pàgina contingui un mínim de 3 paràgrafs de text, un llistat, i algun element multimèdia: imatge, vídeo, etc. Tingues en compte els elements d'HTML que s'usen per a estructurar la informació de la pàgina com a paràgrafs,llistes, cites o capçaleres.
 
-Images are very important for the responsiveness of our website. But also it is very important the size of these images as we grow our website.
+  - Un exemple de pàgines interiors podria ser una recepta de cuina o la història d'un plat concret. També pots ser més original ;)
 
-### Background key-points
+- **Presentació**: Una pàgina que expliqui detalladament el contingut del lloc web. Si la portada presenta breument el contingut i enllaça a les pàgines, aquesta pàgina ha 'explicar de manera més detalladament el contingut. La pàgina ha d'incloure elements multimèdia com a imatges o vídeos i almenys 3 paràgrafs de text.
+- **Enllaços**: Una pàgina amb documentació a les fonts de les quals s'ha tret el contingut i atribucions als drets copyleft quan sigui necessari. Feu atenció de no utilitzar imatges i continguts en general amb drets d'autor ja que no podreu publicar el lloc web.
 
-Here you have some information that you'll need throughout the project:
+#### Navegació
 
-1. **Responsive Images**
+- La portada ha d'enllaçar a la pàgina de categoria, de presentació i d'enllaços.
+- La pàgina de categoria ha d'enllaçar la pàgina de detall.
+- Les pàgines de detall han d'incloure enllaços a altres pàgines de detall de la mateixa categoria o a altres pàgines relacionades.
 
-   - **Resources:**
-     - [MDN Web Docs - Responsive Images](https://developer.mozilla.org/en-US/docs/Learn/HTML/Multimedia_and_embedding/Responsive_images)
-     - [W3Schools - Responsive Images](https://www.w3schools.com/html/html_responsive_images.asp)
-     - [CSS-Tricks - Responsive Images](https://css-tricks.com/responsive-images-css/)
-     - [Web.DEv - Optimize your images](https://web.dev/articles/choose-the-right-image-format/)
+#### Figma i Tailwind CSS
 
-2. **SVG and Cli-Path:**
+Crea al menys un component (pot ser la capçalera o un botó... has de pensar en elements reutilitzables) amb Figma i tracta d'exporar-lo a TailwindCSS amb les eines que incorpora. Existeixen diversos plugins de Figma que et poden ajudar a resoldre aquesta tasca amb més o menys facilitat.
 
-   - **Resources:**
-     - [W3Schools - SVG Tutorial](https://www.w3schools.com/graphics/svg_intro.asp)
-     - [CSS-Tricks - A Comprehensive Guide to SVG](https://css-tricks.com/svg-guide/)
+Durant el transcurs de la pràctica farem algunes proves. Mira d'explicar com ho has dut a terme en la documentació.
 
-3. **Imagemin and Sharp:**
+#### Publicació
 
-   - **Resources:**
-     - [Imagemin - GitHub Repository](https://github.com/imagemin/imagemin)
-     - [Sharp - GitHub Repository](https://github.com/lovell/sharp)
-     - [Parcel - Image Optimization](https://parceljs.org/recipes/image/)
+Desplegar el lloc web en un servidor públic i assegurar-se que siga accessible des d'internet. Recomanem Github Pages per a això o si vols investigar més, pots utilitzar [Netlify](https://www.netlify.com/) o [Vercel](https://vercel.com/).
 
-4. **CSS Animations (Keyframes):**
+### Part 2: Documentació
 
-   - **Resources:**
-     - [MDN Web Docs - CSS Animations](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Animations)
-     - [CSS-Tricks - A Guide to CSS Animation](https://css-tricks.com/snippets/css/keyframe-animation-syntax/)
+Documentar tot el procés de desenvolupament, incloent:
 
-5. **Comparison with PageSpeed Insights and Lighthouse:**
-   - **Resources:**
-     - [PageSpeed Insights - Google Developers](https://developers.google.com/speed/pagespeed/insights/)
-     - [Lighthouse - Google Developers](https://developers.google.com/web/tools/lighthouse)
+- Explicació de les eine utilitzades i com ens ajuden a desenvolupar el nostre web (Tailwind CSS, Parcel, etc.).
+- Presentació del Wireframe i del SiteMap.
+- Explicació de les decisions preses en el disseny i desenvolupament del lloc web.
+- Enllaços i recursos utilitzats.
 
-## Project Tasks - WHAT I NEED TO DO.
+### Criteris d'Avaluació
 
-Starting from your website from the first project, you'll need to ensure the following requirements. This is, you've to make the necessary changes, if not yet implemented, to ensure that your website meets the following requirements:
+#### :computer: **Desenvolupament** [70%]
 
-1. **Header and Footer:**
-
-   - Design a simple header with a title and a basic logo created by you.
-   - Create a footer with links to all pages.
-
-2. **Responsive Design:**
-
-   - Ensure the WHOLE website is responsive for various devices. This is an opportunity to improve the responsiveness weaknesses.
-   - Incorporate the use of different images (resolution/size) for different devices (mobile, tablet, desktop). You can use the `srcset` attribute to do this.
-   - Incorporate at least one element with art direction (different images for different devices). You can use the `picture` element to do this.
-
-3. **Image Optimization:**
-
-   - Make a decision about the format that you want to use for your images and explain why you've chosen that format.
-   - MANUALLY (as you have done with the tasks in this UF) optimize AT LEAST TWO images on the website.
-   - Compare the original image on the website with the optimized image. Use the developer tools to compare the size of the images (Before/After)
-   - Investigate and show how to optimize an image using Imagemin or Sharp tools. This are tools that can be used to optimize images automatically.
-   - Check also how Parcel can help you to AUTOMATE the optimization of images of your website. Explain how you did it.
-
-4. **CSS Clip-Path & Animations:**
-
-   - Add a CSS animation to an element on the homepage.
-   - Add also a CSS clip-path to an element on the homepage.
-
-5. **Perfomance tools - PageSpeed Insights and Lighthouse**
-
-   - Do it BEFORE and AFTER the optimization of the images.
-   - Run a test on PageSpeed Insights and Lighthouse to check the performance of your website.
-   - Take a screenshot of the results and add it to your documentation.
-
-6. **Documentation:**
-   - You can use a document (PDF), markdown or a page of your Website to document main aspects with a focus on image optimization (format and size comparison). Just make sure to write the keypoints of the project (formats, sizes, techniques, tools, etc.)
-   - Once you have it, create a video of **no more than 2min** with a repid explanation of the main aspects covered. Include how you have optimized the images using Imagemin or Sharp + how to use Parcel to automate the optimization of images of your website.
-
-### Structure Reminder
-
-You need to follow the structure of the first project. There're some changes but the general structure keeps the same.
-
-#### Homepage
-
-- Include at least one graphic resource edited with clip-path. Get creative! Cut an image and create a shape that integrates well into the page.
-
-#### Detail Page
-
-- Add a representative featured image that explains the page's content.
-- Ensure the image is well-integrated into the design for both mobile and larger screens.
-- Include at least two additional images (excluding header and footer), preferably in various formats (properly justified in the practice documentation).
-
-#### Category Page
-
-- Display the chosen featured image from the detail page, similar to platforms like Amazon, where a small image is visible during a search, and it enlarges when you enter the product page.
-
-#### Presentation Page
-
-- Include at least one graphic resource made with SVG on this page.
-- The SVG should have a small animation using CSS.
-
-#### Links Page
-
-- Add your video tutorial to the links page.
-- It's very important to be sure about the use of copyrighted material.
-- Ensure compliance with limits and exceptions when using copyrighted materials.
-- All resources requiring acknowledgment of rights must be correctly recognized and linked on this page.
-
-## Evaluation Criteria:
-
-**Development (70%):**
-
-- Creation and/or modification to use of the appropriate and optimized format of images (25%).
-- Adaptation of the resources to have a good-looking, optimized, responsive design (25%).
-- Clip-Path and Animation (10%).
-- Use of image-optimization tools (10%).
-
-**Documentation (30%):**
-
-- Documentation quality of the development process (15%).
-- Quality of the video explanations and justifications (15%).
-
-**Important Note:**
-
-- PUBLISH YOUR WEBSITE (Netlify, GitHub Pages, etc.) AND ADD THE LINK IN THE DOCUMENTATION.
-- MAKE SURE TO MAKE IT CLEAR IN YOUR MOODLE SUBMISSION WHERE TO FIND THE DOCUMENTATION AND VIDEO.
-
-### Intellectual Property and Plagiarism
-
-When creating multimedia works, it is often unavoidable to use resources created by third parties. It is understandable to do so within the framework of a practice in the studies of this Master's program, as long as it is clearly documented and does not constitute plagiarism in practice.
-
-Therefore, when submitting a practice that uses third-party resources, it should be accompanied by a document detailing the resources used. This document should specify the name of each resource, its author, where it was obtained, and its legal status — whether the work is protected by copyright or falls under another usage license (Creative Commons, GNU, GPL, etc.). The student must ensure that the chosen license does not explicitly prohibit its use within the scope of the practice. If the corresponding information cannot be found, it should be assumed that the work is protected by copyright.
-
-Additionally, when digital works are used, the original files must be attached, and their source code, if applicable.
+- [15%] Ús correcte de l'entorn de desenvolupament i les eines utilitzades.
+- [15%] Presentació del Wireframe i del SiteMap.
+- [25%] Ús dels components de Tailwind CSS i responsivitat
+- [10%] Estils i adequació a l'estructura de la pràctica
+- [5%] Publicació a internet
+
+#### ✏️ Documentació [30%]
+
+- [10%] Documentació del procés de desenvolupament.
+- [10%] Justificació de les decisions preses.
+- [10%] Anàlisi dels resultats obtinguts.
